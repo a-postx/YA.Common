@@ -4,7 +4,7 @@ namespace YA.Common
 {
     public static class DateTimeExtensions
     {
-        ///<summary>Converts a datetime into unix time format.</summary>
+        ///<summary>Возвращает дату конвертированную в Юникс-формат.</summary>
         public static double ToUnixTimestamp(this DateTime dateTime)
         {
             return (TimeZoneInfo.ConvertTimeToUtc(dateTime) -
