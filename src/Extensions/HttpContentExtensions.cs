@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class HttpContentExtensions
     {

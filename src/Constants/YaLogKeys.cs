@@ -1,6 +1,6 @@
 ﻿namespace YA.Common.Constants
 {
-    public static class YaLogNames
+    public static class YaLogKeys
     {
         public const string ClientIP = nameof(ClientIP);
         public const string CorrelationId = nameof(CorrelationId);

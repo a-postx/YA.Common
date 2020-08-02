@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class StringExtensions
     {

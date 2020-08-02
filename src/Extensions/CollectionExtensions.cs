@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class CollectionExtensions
     {

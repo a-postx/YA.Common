@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     /// <summary>
     /// Extension methods for all objects.

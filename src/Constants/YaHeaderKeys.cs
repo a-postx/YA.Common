@@ -1,6 +1,6 @@
 ﻿namespace YA.Common.Constants
 {
-    public static class YaHeaderNames
+    public static class YaHeaderKeys
     {
         public const string Link = nameof(Link);
     }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class DictionaryExtensions
     {

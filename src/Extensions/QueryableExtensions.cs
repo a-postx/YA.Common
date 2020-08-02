@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class QueryableExtensions
     {

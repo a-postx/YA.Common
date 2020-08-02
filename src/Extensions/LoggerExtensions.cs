@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class LoggerExtensions
     {

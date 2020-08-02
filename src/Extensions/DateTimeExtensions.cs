@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YA.Common
+namespace YA.Common.Extensions
 {
     public static class DateTimeExtensions
     {
