@@ -45,5 +45,32 @@ namespace YA.Common.Extensions
 
             return enumerable;
         }
+
+        public static IQueryable<T> IfElse<T>(this IQueryable<T> enumerable, bool condition, Func<IQueryable<T>, IQueryable<T>> ifAction, Func<IQueryable<T>, IQueryable<T>> elseAction)
+        {
+            if (enumerable is null)
+            {
+                throw new ArgumentNullException(nameof(enumerable));
+            }
+
+            if (ifAction is null)
+            {
+                throw new ArgumentNullException(nameof(ifAction));
+            }
+
+            if (elseAction is null)
+            {
+                throw new ArgumentNullException(nameof(elseAction));
+            }
+
+            if (condition)
+            {
+                return ifAction(enumerable);
+            }
+            else
+            {
+                return elseAction(enumerable);
+            }
+        }
     }
 }

@@ -8,6 +8,11 @@ namespace YA.Common
     {
         public static Guid Create(string userId)
         {
+            if (string.IsNullOrEmpty(userId))
+            {
+                throw new ArgumentOutOfRangeException(nameof(userId), userId, "UserID cannot be empty");
+            }
+
             Guid result;
 
             using (MD5 md5 = MD5.Create())

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Net.Http;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -9,15 +8,6 @@ namespace YA.Common
 {
     public static class NetTools
     {
-        public static HttpClient GetHttpClient(string userAgent = "YA/1.0 (2412719@mail.ru)", int requestTimeout = 60)
-        {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", userAgent);
-            client.Timeout = TimeSpan.FromSeconds(requestTimeout);
-
-            return client;
-        }
-
         public static async Task<bool> CheckPingAsync(this IPAddress ip, int timeoutMs = 2000)
         {
             bool result = false;
