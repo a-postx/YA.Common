@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>1.0.6.0</Version>
+    <Version>1.0.6.1</Version>
     <Authors>Alexey Yakubin</Authors>
     <Company>Delobytes</Company>
     <Copyright>Авторские права © Делобайты 2020. Все права защищены</Copyright>
     <Description>Статические утилиты</Description>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
-    <FileVersion>1.0.6.0</FileVersion>
+    <AssemblyVersion>1.0.6.1</AssemblyVersion>
+    <FileVersion>1.0.6.1</FileVersion>
     <RepositoryUrl>https://github.com/a-postx/YA.Common.git</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
