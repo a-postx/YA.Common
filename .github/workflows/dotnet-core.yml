@@ -40,7 +40,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: 'windows-latest'
-        path: ./Artefacts
+        path: dist
 
   push-github-packages:
     name: 'Push GitHub Package'
