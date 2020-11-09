@@ -35,12 +35,12 @@ jobs:
     - name: 'Test'
       run: dotnet test --no-restore --verbosity normal
     - name: 'Pack'
-      run: dotnet pack --no-build --configuration Release src/YA.Common.csproj --output .
+      run: dotnet pack --no-build --configuration Release src/YA.Common.csproj --output distr
     - name: 'Publish Artefacts'
       uses: actions/upload-artifact@v2
       with:
-        name: 'windows-latest'
-        path: .
+        name: ${{matrix.os}}
+        path: distr
 
   push-github-packages:
     name: 'Push GitHub Package'
