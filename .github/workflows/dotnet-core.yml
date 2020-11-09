@@ -3,13 +3,8 @@ name: .NET Core
 on:
   push:
     branches: [ master ]
-    tags:
-      - "*"
   pull_request:
     branches: [ master ]
-  release:
-    types:
-      - created
 
 env:
   # Disable the .NET logo in the console output.
@@ -50,7 +45,6 @@ jobs:
   push-github-packages:
     name: 'Push GitHub Package'
     needs: build
-    if: github.ref == 'refs/heads/main' || github.event_name == 'release'
     runs-on: windows-latest
     steps:
       - name: 'Download Artefact'
@@ -67,7 +61,6 @@ jobs:
   push-nuget:
     name: 'Push NuGet Package'
     needs: build
-    if: github.event_name == 'release'
     runs-on: windows-latest
     steps:
       - name: 'Download Artefact'
