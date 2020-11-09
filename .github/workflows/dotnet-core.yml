@@ -37,10 +37,10 @@ jobs:
     - name: 'Pack'
       run: dotnet pack --no-build --configuration Release src/YA.Common.csproj --output .
     - name: 'Publish Artefacts'
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v2
       with:
         name: 'windows-latest'
-        path: './Artefacts'
+        path: ./Artefacts
 
   push-github-packages:
     name: 'Push GitHub Package'
@@ -49,7 +49,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: 'Download Artefact'
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: 'windows-latest'
       - name: 'Dotnet NuGet Add Source'
