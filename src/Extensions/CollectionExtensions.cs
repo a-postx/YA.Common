@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,16 @@ namespace YA.Common.Extensions
                     yield return list.GetRange(i, Math.Min(batchSize, list.Count - i));
                 }
             }
+        }
+
+        ///<summary>Splits a collection into subcollections based on the specified batch size.</summary>
+        ///<param name="batchSize">The number of items in a batch.</param>
+        ///<returns>A set of lists.</returns>
+        public static IEnumerable<IEnumerable<T>> Split<T>(this IEnumerable<T> list, int batchSize)
+        {
+            return list.Select((item, index) => new { index, item })
+                       .GroupBy(x => x.index % batchSize)
+                       .Select(x => x.Select(y => y.item));
         }
 
         ///<summary>Converts a list items into string using StringBuilder.</summary>
