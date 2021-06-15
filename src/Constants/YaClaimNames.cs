@@ -13,5 +13,6 @@
         public const string role = nameof(role);
         public const string externalId = nameof(externalId);
         public const string azp = nameof(azp);
+        public const string tenantaccesstype = nameof(tenantaccesstype);
     }
 }
